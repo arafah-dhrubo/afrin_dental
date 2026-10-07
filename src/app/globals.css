@@ -1,26 +1,88 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap");
+
+@theme {
+  --color-brand-blue: #1f87b8;
+  --color-brand-blue-dark: #176d96;
+  --color-brand-blue-light: #38a5d9;
+  --color-brand-navy: #0e3446;
+  --color-brand-navy-light: #16475e;
+  --color-brand-text: #4a6270;
+  --color-brand-text-light: #6c8494;
+  --color-brand-bg: #eef7ff;
+  --color-brand-bg-soft: #f4f9fd;
+  --color-brand-amber: #f5a300;
+  --font-bengali: "Hind Siliguri", "Kalpurush", "SolaimanLipi", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: "Poppins", "Hind Siliguri", -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --blue: #1f87b8;
+  --blue-d: #176d96;
+  --navy: #0e3446;
+  --text: #4a6270;
+  --bg: #eef7ff;
+  --white: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-heading);
+  color: var(--navy);
+  background-color: #ffffff;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Bengali font priority helper */
+.font-bengali {
+  font-family: var(--font-bengali);
+}
+
+/* Glassmorphism utility */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(31, 135, 184, 0.15);
+  box-shadow: 0 4px 20px -2px rgba(14, 52, 70, 0.06);
+}
+
+/* Subtle floating animation for hero bubbles */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 4.5s ease-in-out infinite;
+}
+
+/* Responsive custom container */
+.container-custom {
+  width: min(100% - 32px, 1140px);
+  margin-inline: auto;
 }
