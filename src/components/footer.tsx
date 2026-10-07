@@ -74,8 +74,8 @@ export const Footer: React.FC = () => {
               <li><Link href="/services/root-canal" className="hover:text-white transition-colors">ব্যথামুক্ত রুট ক্যানাল (RCT)</Link></li>
               <li><Link href="/services/scaling" className="hover:text-white transition-colors">স্কেলিং ও পলিশিং</Link></li>
               <li><Link href="/services/filling" className="hover:text-white transition-colors">দাঁতের ফিলিং ও রেস্টোরেশন</Link></li>
-              <li><Link href="/services/laser" className="hover:text-white transition-colors">লেজার ডেন্টাল সার্জারি</Link></li>
-              <li><Link href="/services/cosmetic" className="hover:text-white transition-colors">কসমেটিক ক্যাপ ও ক্রাউন</Link></li>
+              <li><Link href="/services/surgery" className="hover:text-white transition-colors">লেজার ডেন্টাল সার্জারি</Link></li>
+              <li><Link href="/services/checkup" className="hover:text-white transition-colors">দাঁতের চেকআপ ও পরামর্শ</Link></li>
               <li><Link href="/emergency-dentist-dhaka" className="text-red-300 font-semibold hover:text-white transition-colors">জরুরী ডেন্টাল সেবা (Emergency)</Link></li>
             </ul>
           </div>

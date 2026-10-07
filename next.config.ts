@@ -21,6 +21,35 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  async redirects() {
+    return [
+      {
+        source: "/services/laser",
+        destination: "/services/surgery",
+        permanent: true,
+      },
+      {
+        source: "/services/cosmetic",
+        destination: "/services/filling",
+        permanent: true,
+      },
+      {
+        source: "/root-canal",
+        destination: "/root-canal-treatment-dhaka",
+        permanent: true,
+      },
+      {
+        source: "/emergency",
+        destination: "/emergency-dentist-dhaka",
+        permanent: true,
+      },
+      {
+        source: "/emergency-care",
+        destination: "/emergency-dentist-dhaka",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
